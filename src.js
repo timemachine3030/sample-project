@@ -3,6 +3,14 @@
  * @param numbers
  */
 function findUniqueNumbers(numbers) {
+	var uniqueNumbers = [];
+	var i;
+	for(i = 0; i < numbers.length; i++){
+		if(!uniqueNumbers.includes(numbers[i])){
+			uniqueNumbers[uniqueNumbers.length] = numbers[i];
+		}
+	}
+	return uniqueNumbers;
 }
 
 /**
