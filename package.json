@@ -4,7 +4,7 @@
   "main": "src.js",
   "license": "MIT",
   "scripts": {
-    "test": "mocha --bail=false tests.js"
+    "test": "mocha --bail=false factorTest.js"
   },
   "dependencies": {
     "chai": "^4.2.0",

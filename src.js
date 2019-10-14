@@ -61,10 +61,34 @@ function isPalindrome(term) {
 	return false;
 }
 
+/**
+ * Returns an array of all the prime factors of a number.
+ * @param num
+ */
+function primeFactors(num) {
+	var tempNumber = num;
+	var factors = [];
+	//Check if the number is divisible by 2
+	while(num%2 == 0){
+		factors[factors.length] = 2;
+		num = num/2;
+	}
+	
+	//Check all other numbers up to the square root of the number
+	for(var i = 3; i < (tempNumber/2)+1; i += 2){
+		while(num%i == 0){
+			factors[factors.length] = i;
+			num = num/i;
+		}
+	}
+	return factors;
+}
+
 
 // Export the functions under test:
 module.exports = {
     findUniqueNumbers,
     isPalindrome,
-    sortArray
+    sortArray,
+	primeFactors
 };
