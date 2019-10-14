@@ -13,7 +13,7 @@ You can find instructions for your operating system at: https://nodejs.org/en/do
 
 ### Local setup
 
-After you have install the above open your command line and navigate to the location you have cloned this project; Run:
+After you have installed nodejs and npm, open your command line and navigate to the location you have cloned this project; Run:
 
 ```
 npm install
@@ -41,6 +41,6 @@ returns an array of the prime factors of the that input. To run your new test fi
 section of the `package.json` file. See the online documentation for mocha if you need more information.
 
 Example tests:
- - input 1: `[]`
- - input 2: `[2]`
- - input 4: `[2, 2]`
+ - primeFactors(1): `[]`
+ - primeFactors(2): `[2]`
+ - primeFactors(4): `[2, 2]`
