@@ -42,6 +42,23 @@ function sortArray(numbers) {
  * @param term
  */
 function isPalindrome(term) {
+	//Replace all spaces and punct. Changes to lowercase.
+	term = term.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, "");
+	term = term.replace(/–/g, "")
+	term = term.replace(/ /g, "");
+	term = term.toLowerCase();
+	
+	//Create a new version of the string but backwards
+	var newTerm = "";
+	for(var i = term.length - 1; i > -1; i--){
+		newTerm = newTerm.concat(term[i]);
+	}
+	
+	//Check to see if the term is the same backwards
+	if(newTerm == term){
+		return true;
+	}
+	return false;
 }
 
 
